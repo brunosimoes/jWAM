@@ -10,22 +10,22 @@ package org.jwam;
 
 public class DataCell extends Symbol {
 
-	/** Conte�do da vari�vel no caso de REF... */
+	/** Conteúdo da variável no caso de REF... */
 	private int value;
 
-	/** Conte�do da vari�vel no caso de CON, FUN... */
+	/** Conteúdo da variável no caso de CON, FUN... */
 	private String data;
 
 	/** UNB, REF, CON, LIS, STR... */
 	private int tag;
 
-	/** Label associado a esta c�lula. */
+	/** Label associado a esta célula. */
 	private String label = " ";
 
 	/**
-	 * Constroi uma c�lula apartir de um TAG e uma refer�ncia.
+	 * Constroi uma célula apartir de um TAG e uma referência.
 	 * @param tag TAG.
-	 * @param value refer�ncia.
+	 * @param value referência.
 	 */
 
 	public DataCell(int tag, int value){
@@ -33,8 +33,8 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Cria uma c�lula contendo uma refer�ncia.
-	 * @param value � suposto ser um endere�o.
+	 * Cria uma célula contendo uma referência.
+	 * @param value é suposto ser um endereço.
 	 */
 
 	public DataCell(int value){
@@ -42,10 +42,10 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Cria uma c�lula com determinado TAG, eg. CON, FUN, dados: e.g halt e REF.
+	 * Cria uma célula com determinado TAG, eg. CON, FUN, dados: e.g halt e REF.
 	 * @param tag TAG.
-	 * @param value informa��o em String.
-	 * @param addr refer�ncia.
+	 * @param value informação em String.
+	 * @param addr referência.
 	 */
 
 	public DataCell(int tag, String value, int addr){
@@ -66,7 +66,7 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Associa um label a esta c�lula.
+	 * Associa um label a esta célula.
 	 * @param l label a associar.
 	 */
 
@@ -75,8 +75,8 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Obtem o label associado � c�lula.
-	 * @return Devolve o label associado � c�lula.
+	 * Obtem o label associado à célula.
+	 * @return Devolve o label associado à célula.
 	 */
 
 	public String label(){
@@ -85,7 +85,7 @@ public class DataCell extends Symbol {
 
 	/**
 	 * Compara dois labels.
-	 * @param label label a comparar com o desta c�lula.
+	 * @param label label a comparar com o desta célula.
 	 * @return Devolve true se forem iguais.
 	 */
 
@@ -94,8 +94,8 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Obtem uma refer�ncia se for esse o conte�do desta c�lula, else -1.
-	 * @return Devolve a referencia se for esse o conte�do desta c�lula, else -1.
+	 * Obtem uma referência se for esse o conteúdo desta célula, else -1.
+	 * @return Devolve a referencia se for esse o conteúdo desta célula, else -1.
 	 */
 
 	public int getValue(){
@@ -103,8 +103,8 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Define dados nesta c�lula.
-	 * @param data dados a inserir na c�lula.
+	 * Define dados nesta célula.
+	 * @param data dados a inserir na célula.
 	 */
 
 	public void setStringValue(String data){
@@ -113,7 +113,7 @@ public class DataCell extends Symbol {
 
 	/**
 	 * Obtem a constante ou o functor se existirem.
-	 * @return Devolve a constante ou o functor se existirem nesta c�lula.
+	 * @return Devolve a constante ou o functor se existirem nesta célula.
 	 */
 
 	public String getStringValue(){
@@ -121,8 +121,8 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Obtem o TAG desta c�lula.
-	 * @return Devolve o TAG desta c�lula.
+	 * Obtem o TAG desta célula.
+	 * @return Devolve o TAG desta célula.
 	 */
 
 	public int getTag(){
@@ -131,7 +131,7 @@ public class DataCell extends Symbol {
 
 	/**
 	 * Compara dois TAGS.
-	 * @param tag TAG a comparar com o desta c�lula.
+	 * @param tag TAG a comparar com o desta célula.
 	 */
 
 	public boolean equals(int tag){
@@ -139,8 +139,8 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Copia a informa��o de uma c�lula para esta.
-	 * @param dc c�lula a copiar.
+	 * Copia a informação de uma célula para esta.
+	 * @param dc célula a copiar.
 	 */
 
 	public void copyFrom(DataCell dc){
@@ -159,7 +159,7 @@ public class DataCell extends Symbol {
 
 	/**
 	 * Compara dois functores.
-	 * @param f functor a comparar com o desta c�lula.
+	 * @param f functor a comparar com o desta célula.
 	 * @return Devolve true se forem iguais.
 	 */
 
@@ -168,7 +168,7 @@ public class DataCell extends Symbol {
 	}
 
 	/**
-	 * Apresenta a celula numa representa��o textual.
+	 * Apresenta a celula numa representação textual.
 	 * @return Devolve uma String que representa a celula.
 	 */
 

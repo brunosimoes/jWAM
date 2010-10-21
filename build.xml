@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="jWAM" basedir="." default="all">
+	<property environment="env" />
+	<property name="project.name" value="jWAM" />
+	<property name="project.version" value="1.0" />
+	<property name="deploy.dir" location="releases" />
+	<property name="source.dir" location="src" />
+	<property name="classes.dir" location="classes" />
+	<property name="lib.dir" location="3rd-party" />
+	<target name="all" description="Generate JAR" depends="jar" />
+
+	<target name="jar" description="Generate JAR">
+		<delete file="MANIFEST.MF" />
+		<delete file="${deploy.dir}/${project.name}-${project.version}-b${build.number}.jar" />
+		<buildnumber file="build.num" />
+		<manifest file="MANIFEST.MF">
+			<attribute name="Built-By" value="${user.name}" />
+			<attribute name="Main-Class" value="org.jwam.JWAM" />
+			<attribute name="Implementation-Version" value="${project.version}-b${build.number}" />
+			<attribute name="Built-Date" value="${TODAY}" />
+		</manifest>
+		<jar jarfile="${deploy.dir}/${project.name}-${project.version}-b${build.number}.jar"
+			 update="true" manifest="MANIFEST.MF" basedir="${classes.dir}" includes="**/*.class"/>
+	</target>
+	
+</project>
